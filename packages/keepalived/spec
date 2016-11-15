@@ -1,0 +1,9 @@
+---
+name: keepalived
+
+dependencies:
+- openssl
+
+files:
+- keepalived/keepalived-1.2.24.tar.gz
+

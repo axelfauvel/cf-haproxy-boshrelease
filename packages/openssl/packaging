@@ -1,0 +1,11 @@
+# abort script on any command that exits with a non zero value
+set -e -x
+
+mkdir ${BOSH_INSTALL_TARGET}/openssl
+echo "Extracting openssl"
+tar xzf openssl/openssl-1.0.2j.tar.gz
+cd openssl-1.0.2j
+
+CFLAGS="-fPIC" ./config shared --prefix=${BOSH_INSTALL_TARGET}/openssl
+make
+make install

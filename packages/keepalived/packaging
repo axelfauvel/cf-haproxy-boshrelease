@@ -1,0 +1,12 @@
+# abort script on any command that exits with a non zero value
+set -e -x
+
+tar xzvf keepalived/keepalived-1.2.24.tar.gz
+cd keepalived-1.2.24/
+
+#compile keepalive
+./configure LDFLAGS="$LDFLAGS -L${BOSH_INSTALL_TARGET}/openssl/lib" CPPFLAGS="-I${BOSH_INSTALL_TARGET}/openssl/include" CFLAGS="$CFLAGS -I${BOSH_INSTALL_TARGET}/openssl/include" --prefix=${BOSH_INSTALL_TARGET}
+make CPPFLAGS="-I${BOSH_INSTALL_TARGET}/openssl/include"
+make install
+
+

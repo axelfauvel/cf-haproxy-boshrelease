@@ -1,0 +1,8 @@
+---
+name: openssl
+
+dependencies: []
+
+files:
+- openssl/openssl-1.0.2j.tar.gz
+
