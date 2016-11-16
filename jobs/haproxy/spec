@@ -7,7 +7,6 @@ packages:
 - haproxy
 - ttar
 - keepalived
-- openssl
 
 templates:
   haproxy.config.erb:        config/haproxy.config
