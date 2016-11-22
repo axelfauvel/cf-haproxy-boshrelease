@@ -1,6 +1,6 @@
 global_defs {
 	# Keepalived process identifier
-	lvs_id <%= p('keepalived.lvs_id') %>
+	lvs_id <% if defined?p('keepalived.lvs_id').nil? %> <%= p('keepalived.lvs_id')%> <% else %> <%= spec.name %> <% end %>
 }
 # Script used to check if HAProxy is running
 vrrp_script <%= p('keepalived.healthcheck_name') %> {
@@ -28,8 +28,3 @@ vrrp_instance <%= p('keepalived.vrrp_instance_name') %> {
 		<%= p('keepalived.healthcheck_name') %>
 	}
 }
-<% if p('keepalived.masterip').include? spec.networks.marshal_dump.first[1].ip %>
-#master
-<% else %>
-#slave
-<% end %>
