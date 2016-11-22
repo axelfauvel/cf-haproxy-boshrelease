@@ -129,8 +129,6 @@ properties:
   keepalived.interface:
     description: interface keepalived will use to mount the VIP
     default: eth0
-  keepalived.masterip:
-    description: IP of masternode
   keepalived.vrrp_instance_name:
     description: name of the VRRP instance
   keepalived.master_priority:
