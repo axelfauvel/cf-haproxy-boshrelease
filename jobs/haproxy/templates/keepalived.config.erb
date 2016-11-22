@@ -10,7 +10,7 @@ vrrp_script <%= p('keepalived.healthcheck_name') %> {
 }
 # Virtual interface
 # The priority specifies the order in which the assigned interface to take over in a failover
-vrrp_instance <%= p('keepalived.vrrp_instance_name') %> {
+vrrp_instance <%= spec.name+'_'+p('keepalived.healthcheck_name') %> {
 	<% if spec.bootstrap %>
 	state MASTER
 	priority 101
