@@ -19,5 +19,3 @@ meta:
     keepalived:
     #Those are mandatory parameters in order to make the release work
       vip: '192.168.0.1'
-      healthcheck_name: 'check_haproxy'
-      healthcheck_command: 'killall -0 haproxy'
