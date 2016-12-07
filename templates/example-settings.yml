@@ -17,5 +17,5 @@ meta:
       keepalive_timeout:    1
       queue_timeout:       30
     keepalived:
-    #Those are mandatory parameters in order to make the release work
+    #vip is the only mandatory parameter
       vip: '192.168.0.1'
