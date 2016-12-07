@@ -119,22 +119,16 @@ properties:
           ssl: true        # optional - enables ssl, and uses the `ha_proxy.ssl_pem` provided key
 
   keepalived.vip:
-    description: VIP that will be given to master
+    description: Virtual IP V4 address that will be given to master 
   keepalived.healthcheck_name:
     description: name of healthcheck that will be performed
     default: check_haproxy
   keepalived.healthcheck_command:
-    description: check that will be performed
+    description: when health check fails, this triggers a fail over. The default command checks the haproxy process is still alive.
     default: killall -0 haproxy
   keepalived.interface:
     description: interface keepalived will use to mount the VIP
     default: eth0
-  keepalived.master_priority:
-    description: master weight
-    default: 101
-  keepalived.slave_priority:
-    description: slave weight
-    default: 100
   keepalived.lvs_id:
     description : Keepalived process identifier. Default value is job name (spec.name)
 
