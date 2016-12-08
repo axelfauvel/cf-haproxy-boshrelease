@@ -16,3 +16,6 @@ meta:
       websocket_timeout: 3600
       keepalive_timeout:    1
       queue_timeout:       30
+    keepalived:
+    #vip is the only mandatory parameter
+      vip: '192.168.0.1'
