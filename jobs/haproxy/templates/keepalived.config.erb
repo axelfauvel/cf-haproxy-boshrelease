@@ -1,6 +1,6 @@
 global_defs {
 	# Keepalived process identifier
-	lvs_id <% if defined?p('keepalived.lvs_id').nil? %> <%= p('keepalived.lvs_id')%> <% else %> <%= spec.name %> <% end %>
+	lvs_id <%= spec.name %> 
 }
 # Script used to check if HAProxy is running
 vrrp_script <%= p('keepalived.healthcheck_name') %> {

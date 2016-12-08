@@ -129,8 +129,6 @@ properties:
   keepalived.interface:
     description: interface keepalived will use to mount the VIP
     default: eth0
-  keepalived.lvs_id:
-    description : Keepalived process identifier. Default value is job name (spec.name)
   keepalived.virtual_router_id:                
    description : Specifies the VRRP virtual router identifier (VRID)(numerical from 0 to 255). A unique VRID value is needed for each VRRP cluster
    default: 1
