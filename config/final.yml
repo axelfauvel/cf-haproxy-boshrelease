@@ -4,9 +4,4 @@ blobstore:
   options:
     bucket_name: cf-haproxy-boshrelease
 
-#blobstore:
-#  provider: local
-#  options:
-#    blobstore_path: /tmp/haproxy-blobs
-
 final_name: cf-haproxy
