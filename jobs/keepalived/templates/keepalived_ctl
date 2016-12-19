@@ -1,5 +1,5 @@
 #!/bin/bash
-APP_DIR=/var/vcap/jobs/haproxy
+APP_DIR=/var/vcap/jobs/keepalived
 PKG_DIR=/var/vcap/packages/keepalived
 BIN_DIR=${PKG_DIR}/bin
 SBIN_DIR=${PKG_DIR}/sbin
