@@ -2,7 +2,7 @@ global_defs {
 	# Keepalived process identifier
 	lvs_id <%= spec.name %> 
 }
-# Script used to check if HAProxy is running
+# Healthcheck test to be performed, if rc is different than 0, new master election is required between all the remaining nodes
 vrrp_script <%= p('keepalived.healthcheck_name') %> {
 	script "<%= p('keepalived.healthcheck_command') %>"
 	interval 2
